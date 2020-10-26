@@ -25,6 +25,11 @@
 </style>
   
   <body style='margin : 0px; overflow: hidden;'>
+    <body style="margin : 0px; overflow: hidden;">
+  <!-- 画像がロードされるまで表示される-->
+  <div class="arjs-loader">
+    <div>Loading, please wait...</div>
+  </div>
       
   <!-- シーンの追加 -->
   <a-scene
@@ -36,7 +41,7 @@
       <!-- 画像マーカー指定 -->
       <a-nft
       type="nft"
-      url="images/penguin"
+      url="https://github.com/oyama777/WebARTest/blob/main/images/penguin"
       smooth="true"
       smoothCount="10"
       smoothTolerance=".01"
@@ -45,7 +50,7 @@
           <!-- オブジェクト指定 -->
           <!--objファイル: 形　mtlファイル: 表面　mtlなしでは透明になってしまう--->
         <a-entity 
-            obj-model="obj: url(obj/Mesh_Penguin.obj);
+            obj-model="obj: url(https://github.com/oyama777/WebARTest/blob/main/obj/Mesh_Penguin.obj);
         mtl: url(obj/Mesh_Penguin.obj)"
             scale="0.02 0.02 0.02"
             rotation="-90 0 0"
@@ -53,7 +58,7 @@
         </a-entity>
         <!--scale:サイズ　rotation: 角度 -90??-->
              <a-text value="Penguin AR : Poly by Google" position="0 0.8 0" align="center"></a-text>
-      </a-nft>
+      </a-marker>
       <!-- カメラ起動 -->
       <a-entity camera></a-entity>
     </a-scene>
