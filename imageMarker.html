@@ -2,7 +2,7 @@
 <html>
   <!-- A-FrameとAR.jsを読み込む -->
   <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
   <body style='margin : 0px; overflow: hidden;'>
     <!-- シーンの追加 -->
     <a-scene
@@ -15,7 +15,6 @@
     <a-assets>
         <a-asset-item id="penguin-obj" src="/obj/penguin.obj"></a-asset-item>
         <a-asset-item id="penguin-mtl" src="/obj/penguin.mtl"></a-asset-item>
-        <a-asset-item id="sample-mtl" src="/images/penguin"></a-asset-item>
     </a-assets>
     <!-- 画像マーカー指定 -->
     <a-nft
@@ -39,7 +38,7 @@
     <a-box position='0 0.5 0' material='color: yellow;'></a-box>
     <!--scale:サイズ　rotation: 角度 -90??-->
     <a-text value="Penguin AR : Poly by Google" position="0 0.2 0" scale="0.5 0.5 0.5" align="center"></a-text>
-    </a-marker>
+    </a-nft>
     <!-- カメラ起動 -->
     <a-entity camera></a-entity>
     </a-scene>
