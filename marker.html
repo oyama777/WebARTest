@@ -6,10 +6,17 @@
   <body style='margin : 0px; overflow: hidden;'>
     <!-- シーンの追加 -->
     <a-scene embedded arjs>
+      <!-- オブジェクトファイルとマテリアルファイルを読み込む -->
+      <a-assets>
+          <a-asset-item id="penguin-obj" src="obj/penguin.obj"></a-asset-item>
+          <a-asset-item id="penguin-mtl" src="obj/penguin.mtl"></a-asset-item>
+      </a-assets>
       <!-- マーカー指定 -->
       <a-marker preset="hiro">
           <!-- オブジェクト指定 -->
           <a-box position='0 0.5 0' material='color: yellow;'></a-box>
+          <a-obj-model id="penguin" src="#penguin-obj" mtl="penguin-mtl" position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0"></a-obj-model>
+          <a-text value="Penguin : poly by google" position="0 1.3 0" align="center"></a-text>
       </a-marker>
       <!-- カメラ起動 -->
       <a-entity camera></a-entity>
